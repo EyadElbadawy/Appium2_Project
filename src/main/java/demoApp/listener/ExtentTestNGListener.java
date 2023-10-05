@@ -1,7 +1,4 @@
-package demoApp.listener;/*
- * Created on 01/10/2023 by Eyad Mohamed
- * Copyright (c) 2023 Vodafone Intelligent Solutions - API Factory
- */
+package demoApp.listener;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

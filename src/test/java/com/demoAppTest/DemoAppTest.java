@@ -4,10 +4,8 @@ import demoApp.screens.HomeScreen;
 import demoApp.utils.JsonReader;
 import io.qameta.allure.Description;
 import org.json.simple.parser.ParseException;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import java.io.IOException;
 
 public class DemoAppTest extends BaseTest {
@@ -42,8 +40,8 @@ public class DemoAppTest extends BaseTest {
                 .ClickOnLoginButton()
                 .LoginWithValidEmailAndPassword
                         (
-                                JsonReader.TestJson.getJson(loginTestData, "email"),
-                                JsonReader.TestJson.getJson(loginTestData, "password")
+                                JsonReader.getJson(loginTestData, "email"),
+                                JsonReader.getJson(loginTestData, "password")
                         )
                 .ClickOnProduct1()
                 .clickOnCounterPlusButton()
@@ -52,20 +50,20 @@ public class DemoAppTest extends BaseTest {
                 .clickOnProceedToCheckoutButton()
                 .fillCheckoutInformation
                         (
-                                JsonReader.TestJson.getJson(checkoutTestData, "FullName"),
-                                JsonReader.TestJson.getJson(checkoutTestData, "AddressLine"),
-                                JsonReader.TestJson.getJson(checkoutTestData, "AddressLine2"),
-                                JsonReader.TestJson.getJson(checkoutTestData, "City"),
-                                JsonReader.TestJson.getJson(checkoutTestData, "State"),
-                                JsonReader.TestJson.getJson(checkoutTestData, "ZipCode"),
-                                JsonReader.TestJson.getJson(checkoutTestData, "Country")
+                                JsonReader.getJson(checkoutTestData, "FullName"),
+                                JsonReader.getJson(checkoutTestData, "AddressLine"),
+                                JsonReader.getJson(checkoutTestData, "AddressLine2"),
+                                JsonReader.getJson(checkoutTestData, "City"),
+                                JsonReader.getJson(checkoutTestData, "State"),
+                                JsonReader.getJson(checkoutTestData, "ZipCode"),
+                                JsonReader.getJson(checkoutTestData, "Country")
                         )
                 .fillPaymentInformation
                         (
-                                JsonReader.TestJson.getJson(paymentTestData, "FullName"),
-                                JsonReader.TestJson.getJson(paymentTestData, "CardNumber"),
-                                JsonReader.TestJson.getJson(paymentTestData, "ExpirationDate"),
-                                JsonReader.TestJson.getJson(paymentTestData, "SecurityCode")
+                                JsonReader.getJson(paymentTestData, "FullName"),
+                                JsonReader.getJson(paymentTestData, "CardNumber"),
+                                JsonReader.getJson(paymentTestData, "ExpirationDate"),
+                                JsonReader.getJson(paymentTestData, "SecurityCode")
                         )
                 .clickOnPlaceOrderButton()
                 .ClickOnContinueShoppingButton();
